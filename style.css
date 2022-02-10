@@ -1,0 +1,447 @@
+:root {
+  --primary-color: #e50914;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #000;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1210px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4.375rem 0;
+}
+
+.content-wrapper {
+  border-bottom: 8px solid #222;
+}
+
+/* HEDAER / SHOWCASE */
+
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 93vh;
+  background: url(/assets/netflix-hom-bg.jpg) no-repeat center center/cover;
+  border-bottom: 8px solid #222;
+}
+
+.showcase::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0px 80px 120px -10px #000000,
+    inset 0px -80px 120px -10px #000000;
+}
+
+.showcase-top {
+  position: relative;
+  z-index: 2;
+  height: 5rem;
+  margin: 0 3.5rem;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showcase-top img {
+  width: 10.4375rem;
+  height: 2.8125rem;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  padding: 0.5rem 1.25rem;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #aaa;
+  color: #fff;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.showcase-content {
+  position: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 9rem;
+  max-width: 950px;
+  z-index: 2;
+}
+
+.showcase-content h1 {
+  font-size: 4rem;
+  max-width: 800px;
+  line-height: 1.1;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.showcase-content h2,
+.showcase-content p {
+  font-size: 1.625rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.showcase-content p {
+  font-size: 1.3rem;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+input {
+  width: 100%;
+  max-width: 580px;
+  padding: 1.4rem 1rem;
+  display: inline-block;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.1;
+  border-radius: 3px;
+}
+
+small {
+  color: #ffa00a;
+  margin-top: 0.625rem;
+  visibility: hidden;
+}
+
+.required {
+  border-bottom: 2px solid #ffa00a;
+}
+
+.btn-start {
+  padding: 1.5rem 4rem;
+  font-size: 1.8rem;
+}
+
+/* MAIN SECTIONS */
+
+.watch-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.offline,
+.kids {
+  flex-direction: row-reverse;
+}
+
+.watch-content {
+  width: 52%;
+  z-index: 3;
+}
+
+.on .watch-content,
+.everywhere .watch-content {
+  padding-right: 2.5rem;
+}
+
+.offline .watch-content,
+.kids .watch-content {
+  padding-left: 2.5rem;
+}
+
+.offline .watch-media {
+  margin-right: 5rem;
+}
+
+.watch-title {
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.watch-text {
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.watch-media {
+  width: 48%;
+  height: 100%;
+  position: relative;
+  flex: 0 1 auto;
+}
+
+.on img {
+  position: relative;
+  z-index: 2;
+}
+
+.on .video-animation-card {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  z-index: 1;
+}
+
+video {
+  vertical-align: baseline;
+  width: 100%;
+  height: 100%;
+}
+
+.watch-media-wrapper {
+  min-height: 100px;
+  width: 100%;
+}
+
+.download-box {
+  position: absolute;
+  left: 49%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  display: flex;
+  padding: 0.5em 0.75em;
+  align-items: center;
+  width: 60%;
+  min-width: 20em;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.75em;
+  background: #000;
+}
+
+.download-box img {
+  height: 5em;
+  margin-right: 1em;
+}
+
+.box-text {
+  flex-grow: 1;
+}
+
+.movie-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.download {
+  font-size: 0.9rem;
+  color: #0071eb;
+}
+
+.download-box::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 3em;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+  background: url(/assets/download-icon.gif) no-repeat center center;
+  background-size: 100%;
+}
+
+.everywhere .video-animation-card {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 63%;
+  max-height: 47%;
+  z-index: 1;
+}
+
+.everywhere img {
+  position: relative;
+  z-index: 2;
+}
+
+/* FAQ ACCORDION */
+
+.faq-container {
+  width: 100%;
+  min-width: 190px;
+  font-size: 1.625rem;
+}
+
+.faq-title {
+  font-size: 3.125rem;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.faq-list {
+  width: 75%;
+  max-width: 815px;
+  margin: 2em auto;
+}
+
+.faq-list-item {
+  max-height: 77px;
+}
+
+.faq-list-item span {
+  display: inline-block;
+  padding: 1.2em;
+}
+
+.faq-question {
+  display: block;
+  background: #303030;
+  position: relative;
+  width: 100%;
+  border: 0;
+  margin-bottom: 1px;
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  font-weight: 400;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.faq-list-item i {
+  position: absolute;
+  top: 35%;
+  right: 1em;
+}
+
+.faq-answer {
+  position: relative;
+  display: inline-block;
+  max-height: 0;
+  overflow: hidden;
+  text-align: left;
+  background-color: #303030;
+  font: inherit;
+}
+
+.accordion-email {
+  max-width: 79%;
+  margin: 0 auto;
+}
+
+.accordion-email p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.faq-list-item i.i-closed {
+  transform: rotate(-45deg);
+}
+
+.closed {
+  height: 100%;
+  padding: 1.2em;
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+/* FOOTER */
+
+.footer-container {
+  height: auto;
+  width: 100%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  font-size: 1em;
+  color: #757575;
+  position: relative;
+}
+
+.footer-site {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-top {
+  margin: 0 0 2rem;
+}
+
+.footer-top a {
+  text-decoration: none;
+  color: #757575;
+}
+
+.footer-list {
+  max-width: 1000px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-item {
+  margin-bottom: 1.1rem;
+  display: inline-block;
+  min-width: 100px;
+  width: 20%;
+  padding-right: 0.7rem;
+  vertical-align: top;
+}
+
+.footer-item a {
+  color: #757575;
+}
+
+.netflix-footer {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
